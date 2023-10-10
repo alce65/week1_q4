@@ -4,6 +4,7 @@
 
 header,
 footer {
-  background-color: bisque;
-  color: maroon;
+  background-color: maroon;
+  color: bisque;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
