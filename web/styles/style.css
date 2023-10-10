@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-header {
+header,
+footer {
   background-color: bisque;
   color: maroon;
 }
