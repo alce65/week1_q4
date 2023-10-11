@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  border: 0;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: brown;
+  color: bisque;
+  padding: 1rem;
+}
+
+header {
+  min-height: 10vh;
+}
+
+footer {
+  min-height: 7vh;
+}
+
+.main-container {
+  padding: 1rem;
+}
+
+p {
+  color: blue;
+}
+
+.p-extra {
+  color: chartreuse;
+}
+
+[type] {
+  border-bottom: 1px solid;
+}
+
+[type='email'] {
+  border-bottom: 1px solid red;
+}
+
+#p1 {
+  color: blueviolet;
+}
+
+section p {
+  text-decoration: underline;
+}
+
+section > p {
+  color: chocolate;
+}
+
+section + p {
+  font-weight: 900;
+}
+
+section ~ p {
+  font-style: italic;
+}
+
+/* PseudoElemento */
+
+article p::first-letter {
+  font-size: 1.5rem;
+}
+
+article p::first-line {
+  text-decoration: underline;
+}
+
+article p::before {
+  content: '❤️';
+}
+
+article p::after {
+  content: '-- Muy importante !';
+}
+
+/* PseudoClases */
+
+p:hover {
+  font-size: 1.3rem;
+}
+
+input:focus {
+  background-color: aquamarine;
+}
+
+li:nth-child(1) {
+  font-style: italic;
+}
+
+li:nth-child(2n) {
+  background-color: darkorange;
+}
+
+li:nth-child(2n + 1) {
+  background-color: beige;
+}
+
+/* p:nth-of-type(2) */
+
+/* section.cascade #pepe {
+  color: cadetblue;
+} */
+
+section.cascade p {
+  color: green;
+}
+
+section.cascade .bar {
+  color: brown;
+}
+section.cascade .foo {
+  color: blue;
+}
