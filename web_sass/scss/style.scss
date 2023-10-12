@@ -1,0 +1,89 @@
+$primary-color: rgb(21, 21, 185);
+
+@import 'base';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+
+  h1 {
+    padding-inline-start: 1rem;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.sections-container {
+  display: flex;
+  gap: 1rem;
+}
+
+section {
+  flex: 2 1 30%;
+  background-color: bisque;
+  padding: 0 1rem;
+}
+
+aside {
+  flex: 1 1 30%;
+  background-color: darkgrey;
+  padding: 0 1rem;
+}
+
+@mixin theme() {
+  background-color: $primary-color;
+  box-shadow: 0 0 1px rgba($primary-color, 0.25);
+  color: #fff;
+}
+
+.info {
+  @include theme;
+}
+
+.foo {
+  @include theme;
+}
+
+@mixin theme2($theme: DarkGray) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, 0.25);
+  color: #fff;
+}
+
+.some {
+  @include theme2;
+}
+
+.alert {
+  @include theme2($theme: DarkRed);
+}
+.success {
+  @include theme2($theme: DarkGreen);
+}
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
