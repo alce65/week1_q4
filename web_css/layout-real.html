@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Flex Layout</title>
+  <style>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      padding-inline-start: 1rem;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    .sections-container {
+      display: flex;
+      gap: 1rem
+    }
+
+    section {
+      flex: 2 1 30%;
+      background-color: bisque;
+      padding: 0 1rem;
+    }
+
+    aside {
+      flex: 1 1 30%;
+      background-color: darkgrey;
+      padding: 0 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Learning Flex Layout</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Clientes</a></li>
+        <li><a href="#">Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="sections-container">
+    <section>
+      <h2>Section</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, beatae aliquam necessitatibus dolorem,
+        perferendis minima qui itaque labore totam iste praesentium natus incidunt quasi neque quam at, deserunt saepe
+        explicabo.</p>
+      <p>Pariatur nam dolore vero nesciunt aliquid ut dicta culpa. Asperiores voluptas voluptate quod mollitia fugiat a
+        blanditiis officiis maiores eaque? Laudantium saepe voluptatibus impedit? Vitae praesentium vero velit delectus
+        necessitatibus!</p>
+      <p>Molestias sit provident itaque voluptate placeat, at, modi ea expedita quam numquam quas necessitatibus maxime
+        cupiditate harum recusandae accusantium a error nulla magnam officiis vel labore corporis? Quod, ratione
+        voluptates?</p>
+      <p>Corrupti, tempore neque minima provident facilis numquam, sed fugit vero temporibus deserunt beatae voluptas
+        consectetur earum consequuntur? Ipsa ad, velit, nostrum vero at fugiat necessitatibus est molestiae dolores,
+        rerum
+        cupiditate!</p>
+      <p>Vitae doloremque facilis earum natus obcaecati eaque quas, delectus architecto facere voluptate mollitia
+        laborum
+        ab ea illum! Sit consequuntur perspiciatis animi, consequatur nobis enim numquam iure sed nulla deleniti ab!</p>
+    </section>
+    <aside>
+      <h2>Info extra</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum exercitationem natus hic odio porro! Vel
+        cupiditate placeat iure officiis autem molestiae accusantium, delectus aperiam laborum, ut ab et, dolore est.
+      </p>
+      <p>Quas rerum sequi est temporibus, iste dolores animi dignissimos voluptatum vel mollitia delectus corporis
+        minus,
+        nostrum quis porro corrupti! Molestiae saepe animi similique quas omnis, corporis quia. Dolorem, ipsam officiis?
+      </p>
+      <p>Natus sed, necessitatibus, fugiat, recusandae quia architecto vero magnam dolores reiciendis mollitia tenetur
+        sunt exercitationem quasi repellendus commodi saepe cum facilis odit odio laborum? Ratione soluta quae harum
+        quam
+        quibusdam!</p>
+    </aside>
+  </div>
+  <footer>
+    <address>ISDI Coders</address>
+  </footer>
+
+</body>
+
+</html>

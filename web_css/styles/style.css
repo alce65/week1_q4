@@ -1,3 +1,10 @@
+:root {
+  --azul: #1313d9;
+
+  --primary-color: var(--azul);
+  --foo: 1rem;
+}
+
 *,
 *::before,
 *::after {
@@ -19,6 +26,7 @@ body {
 h1 {
   margin: 0;
   padding: 0;
+  color: var(--primary-color);
 }
 
 ol,
@@ -147,5 +155,20 @@ section.cascade .bar {
   color: brown;
 }
 section.cascade .foo {
-  color: blue;
+  color: #cf7d19;
+  background-color: aqua;
+}
+
+/* Unidades 'absolutas' */
+
+px
+
+/* Unidades 'relativas' */
+
+* {
+  /* font-size: 16px; */
+  font-size: 1rem;
+  font-size: 1em;
+  width: 50%;
+  height: 50vh;
 }

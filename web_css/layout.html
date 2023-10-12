@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      border: 1px solid rebeccapurple;
+    }
+
+    section {
+      margin: 1rem 0;
+    }
+
+    .float div {
+      width: 3rem;
+      float: left;
+    }
+
+    .float .right {
+      float: right;
+    }
+
+    .clear-fix {
+      clear: both;
+    }
+
+    .flex {
+      display: flex;
+      height: 4rem;
+      background-color: bisque;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .flex2 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="float">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div class="right">4</div>
+    <div>5</div>
+    <div class="right">6</div>
+  </section>
+  <div class="clear-fix"></div>
+  <section class="flex">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </section>
+  <section class="flex2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </section>
+
+
+</body>
+
+</html>
