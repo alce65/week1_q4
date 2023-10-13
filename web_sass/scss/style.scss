@@ -87,3 +87,17 @@ aside {
   @extend .message;
   border-color: green;
 }
+
+@mixin small {
+}
+
+.search {
+  &__input {
+    &--small {
+      @include small();
+    }
+  }
+
+  &--extra {
+  }
+}

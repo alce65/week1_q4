@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positions</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .app-wrapper {
+      background-color: #ffe4c46b;
+      min-height: 100vh;
+      min-width: 320px;
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      border: 1px solid maroon;
+      min-height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      border: 1px solid maroon;
+    }
+
+    footer {
+      border: 1px solid maroon;
+      min-height: 5vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    main {
+      flex: 1 1 auto;
+      margin-inline: 1rem;
+    }
+
+    .image-wrapper {
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .image-title {
+      display: none;
+    }
+
+    .image-wrapper:hover .image-title {
+      display: initial;
+      font-weight: 900;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+
+      /* position: relative;
+      bottom: 5rem;
+      left: 8rem; */
+
+    }
+
+    figure {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .end {
+      position: relative;
+      z-index: 2
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-wrapper">
+    <header>
+      <h1>CSS Positions</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Section</h2>
+        <div class="image-wrapper">
+          <img src="./02.jpg" alt="">
+          <p class="image-title">Mi gato</p>
+        </div>
+
+
+        <figure>
+          <img src="./02.jpg" alt="">
+          <figcaption>Mi gato</figcaption>
+        </figure>
+
+        <p class="end">
+          Fin de la sección
+        </p>
+      </section>
+    </main>
+    <footer>
+      <address>ISDI Coders</address>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>

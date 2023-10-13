@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS RWD</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .app-wrapper {
+      background-color: #ffe4c46b;
+      min-height: 100vh;
+      min-width: 280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header,
+    footer {
+      background-color: maroon;
+      color: bisque;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      min-height: 15vh;
+      justify-content: space-between;
+      padding: 1rem;
+      position: sticky;
+      top: 0rem;
+      bottom: 3rem;
+      z-index: 100;
+    }
+
+    header svg {
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .menu-desk {
+      display: none;
+    }
+
+    footer {
+      min-height: 5vh;
+    }
+
+    main {
+      flex: 1 1 auto;
+      margin-inline: 1rem;
+    }
+
+    .image-wrapper {
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    @media (width > 550px) {
+      .menu-mobile {
+        display: none;
+      }
+
+      .menu-desk {
+        display: initial;
+
+      }
+
+      .menu-desk ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .menu-desk li>ul {
+        display: none;
+        background-color: maroon;
+        color: bisque;
+      }
+
+      .menu-desk li:hover>ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .menu-desk a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.2rem;
+      }
+
+    }
+
+
+    @media (width > 720px) {
+      .list-images {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-wrapper">
+    <header>
+      <h1>CSS RWD</h1>
+      <nav class="menu-mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffe4c4" height="2rem" viewBox="0 0 448 512">
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+        </svg>
+      </nav>
+      <nav class="menu-desk">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Productos</a>
+            <ul>
+              <li>P1</li>
+              <li>P2</li>
+              <li>P3</li>
+            </ul>
+          </li>
+          <li><a href="">Clientes</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <main>
+      <section>
+        <h2>Section</h2>
+        <div class="list-images">
+          <div class="image-wrapper">
+            <img src="./01.jpg" alt="">
+            <p class="image-title">Mi perro</p>
+          </div>
+          <div class="image-wrapper">
+            <img src="./02.jpg" alt="">
+            <p class="image-title">Mi gato</p>
+          </div>
+          <div class="image-wrapper">
+            <img src="./03.jpg" alt="">
+            <p class="image-title">Otro perro</p>
+          </div>
+        </div>
+
+
+        <figure>
+
+
+          <p class="end">
+            Fin de la sección
+          </p>
+      </section>
+    </main>
+    <footer>
+      <address>ISDI Coders</address>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>
